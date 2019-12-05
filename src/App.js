@@ -1,13 +1,15 @@
 import React from "react";
 
-import CurrentSoundDisplay from "./components/CurrentSoundDisplay";
+import SoundPlayPane from "./components/panes/SoundPlayPane";
+import SoundStorePane from "./components/panes/SoundStorePane";
 
 import "./App.css";
 
 const App = () => {
   return (
     <div id="drum-machine">
-      <CurrentSoundDisplay />
+      <SoundPlayPane />
+      <SoundStorePane />
     </div>
   );
 };

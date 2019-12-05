@@ -1,6 +1,10 @@
 /* Remove default margin */
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
+  background: rgb(24, 14, 14);
 }
 
 /* Set core body defaults */
