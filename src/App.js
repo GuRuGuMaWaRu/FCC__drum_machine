@@ -1,8 +1,15 @@
 import React from "react";
+
+import CurrentSoundDisplay from "./components/CurrentSoundDisplay";
+
 import "./App.css";
 
-function App() {
-  return <div className="App">fcc DRUM MACHINE</div>;
-}
+const App = () => {
+  return (
+    <div id="drum-machine">
+      <CurrentSoundDisplay />
+    </div>
+  );
+};
 
 export default App;
