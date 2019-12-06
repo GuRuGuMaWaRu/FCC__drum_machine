@@ -1,3 +1,9 @@
+/* Global variables */
+:root {
+  --border-radius: 3px;
+  --drum-machine-bg: mediumslateblue;
+}
+
 /* Remove default margin */
 body {
   display: flex;

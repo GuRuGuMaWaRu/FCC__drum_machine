@@ -1,0 +1,4 @@
+#display {
+  border-radius: var(--border-radius);
+  background-color: rgb(255, 255, 255);
+}

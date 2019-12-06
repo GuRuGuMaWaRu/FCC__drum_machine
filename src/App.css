@@ -1,5 +1,6 @@
 #drum-machine {
   display: flex;
-  background: mediumslateblue;
   padding: 1rem;
+  border-radius: var(--border-radius);
+  background: var(--drum-machine-bg);
 }
