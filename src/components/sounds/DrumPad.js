@@ -7,7 +7,7 @@ const DrumPad = ({ drumPadName }) => {
 };
 
 DrumPad.propTypes = {
-  drumPadName: PropTypes.number.isRequired
+  drumPadName: PropTypes.string.isRequired
 };
 
 export default DrumPad;

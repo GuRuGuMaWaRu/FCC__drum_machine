@@ -3,7 +3,7 @@ import DrumPad from "./DrumPad";
 import "./DrumPadsPanel.css";
 
 const DrumPadsPanel = () => {
-  const buttons = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  const buttons = ["Q", "W", "E", "A", "S", "D", "Z", "X", "C"];
 
   return (
     <div id="drum-pads-panel">
