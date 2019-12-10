@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+
+import SoundContext from "../../context/sound/soundContext";
 import "./CurrentSoundDisplay.css";
 
 const CurrentSoundDisplay = () => {
-  return <div id="display">Current Sound</div>;
+  const soundContext = useContext(SoundContext);
+  const { currentSound } = soundContext;
+
+  return <div id="display">{currentSound || "---"}</div>;
 };
 
 export default CurrentSoundDisplay;

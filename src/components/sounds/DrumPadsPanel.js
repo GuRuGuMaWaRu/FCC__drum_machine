@@ -36,7 +36,9 @@ const DrumPadsPanel = () => {
       name: "X",
       src: "https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3"
     },
-    { name: "C", src: "https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3" }
+    { name: "C", 
+      src: "https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3" 
+    }
   ];
 
   return (
