@@ -5,7 +5,7 @@ const SoundStorePane = () => {
   const [playing, setPlaying] = useState(false);
 
   const soundContext = useContext(SoundContext);
-  const { currentTrack } = soundContext;
+  const { currentTrack, playSound } = soundContext;
 
   const handlePlay = () => {
     setPlaying(true);
@@ -14,10 +14,12 @@ const SoundStorePane = () => {
     const intervalID = setInterval(() => {
       if (iteration >= currentTrack.length) {
         clearInterval(intervalID);
+        playSound(null);
         setPlaying(false);
         return;
       }
 
+      playSound(currentTrack[iteration].name);
       currentTrack[iteration].sound.play();
 
       iteration += 1;

@@ -2,7 +2,7 @@ import React, { useReducer } from "react";
 
 import SoundContext from "./soundContext";
 import soundReducer from "./soundReducer";
-import { ADD_SOUND } from "../types";
+import { ADD_SOUND, PLAY_SOUND } from "../types";
 
 const SoundState = props => {
   const initialState = {
@@ -13,7 +13,7 @@ const SoundState = props => {
 
   const [state, dispatch] = useReducer(soundReducer, initialState);
 
-  // Add/play a sound
+  // Add sound
   const addSound = sound => {
     dispatch({
       type: ADD_SOUND,
@@ -21,12 +21,13 @@ const SoundState = props => {
     });
   };
 
-  // Play all saved sounds
-  // const playSounds = () => {
-  //   dispatch({
-  //     type: PLAY_SOUNDS
-  //   });
-  // };
+  // Play sound
+  const playSound = sound => {
+    dispatch({
+      type: PLAY_SOUND,
+      payload: sound
+    });
+  };
 
   return (
     <SoundContext.Provider
@@ -34,8 +35,8 @@ const SoundState = props => {
         currentSound: state.currentSound,
         currentTrack: state.currentTrack,
         savedTracks: state.savedTracks,
-        addSound
-        // playSounds
+        addSound,
+        playSound
       }}
     >
       {props.children}
