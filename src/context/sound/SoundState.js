@@ -13,12 +13,20 @@ const SoundState = props => {
 
   const [state, dispatch] = useReducer(soundReducer, initialState);
 
+  // Add/play a sound
   const addSound = sound => {
     dispatch({
       type: ADD_SOUND,
       payload: sound
     });
   };
+
+  // Play all saved sounds
+  // const playSounds = () => {
+  //   dispatch({
+  //     type: PLAY_SOUNDS
+  //   });
+  // };
 
   return (
     <SoundContext.Provider
@@ -27,6 +35,7 @@ const SoundState = props => {
         currentTrack: state.currentTrack,
         savedTracks: state.savedTracks,
         addSound
+        // playSounds
       }}
     >
       {props.children}
