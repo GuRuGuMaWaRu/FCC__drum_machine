@@ -2,6 +2,9 @@
 :root {
   --border-radius: 3px;
   --drum-machine-bg: mediumslateblue;
+  --drum-pad-bg: rgb(250, 232, 68);
+  --drum-pad-accent: rgb(216, 55, 27);
+  --current-sound-display-bg: #fff;
 }
 
 /* Remove default margin */

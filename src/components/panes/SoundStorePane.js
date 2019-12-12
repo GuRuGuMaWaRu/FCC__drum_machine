@@ -1,4 +1,6 @@
 import React, { useState, useContext } from "react";
+
+import PlayedSoundsDisplay from "../displays/PlayedSoundsDisplay";
 import SoundContext from "../../context/sound/soundContext";
 
 const SoundStorePane = () => {
@@ -19,8 +21,11 @@ const SoundStorePane = () => {
         return;
       }
 
-      playSound(currentTrack[iteration].name);
-      currentTrack[iteration].sound.play();
+      playSound({
+        id: currentTrack[iteration].id,
+        name: currentTrack[iteration].name
+      });
+      currentTrack[iteration].audio.play();
 
       iteration += 1;
     }, 500);
@@ -28,6 +33,7 @@ const SoundStorePane = () => {
 
   return (
     <div>
+      <PlayedSoundsDisplay />
       <button onClick={handlePlay} disabled={playing}>
         Play
       </button>

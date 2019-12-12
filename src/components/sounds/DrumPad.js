@@ -1,5 +1,6 @@
 import React, { useRef, useContext } from "react";
 import PropTypes from "prop-types";
+import uuidv1 from "uuid/v1";
 
 import SoundContext from "../../context/sound/soundContext";
 import "./DrumPad.css";
@@ -13,8 +14,9 @@ const DrumPad = ({ drumPad }) => {
   const handleClick = () => {
     drumSound.current.play();
     addSound({
+      id: uuidv1(),
       name: drumPad.name,
-      sound: drumSound.current
+      audio: drumSound.current
     });
   };
 

@@ -5,7 +5,7 @@ export default (state, action) => {
     case ADD_SOUND:
       return {
         ...state,
-        currentSound: action.payload.name,
+        currentSound: { id: action.payload.id, name: action.payload.name },
         currentTrack: [...state.currentTrack, action.payload]
       };
     case PLAY_SOUND:

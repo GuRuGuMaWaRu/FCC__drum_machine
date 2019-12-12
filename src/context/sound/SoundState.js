@@ -6,7 +6,7 @@ import { ADD_SOUND, PLAY_SOUND } from "../types";
 
 const SoundState = props => {
   const initialState = {
-    currentSound: null,
+    currentSound: {},
     currentTrack: [],
     savedTracks: []
   };

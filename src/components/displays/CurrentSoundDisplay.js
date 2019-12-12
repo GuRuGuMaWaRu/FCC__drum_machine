@@ -7,7 +7,7 @@ const CurrentSoundDisplay = () => {
   const soundContext = useContext(SoundContext);
   const { currentSound } = soundContext;
 
-  return <div id="display">{currentSound || "---"}</div>;
+  return <div id="display">{(currentSound && currentSound.name) || "---"}</div>;
 };
 
 export default CurrentSoundDisplay;
