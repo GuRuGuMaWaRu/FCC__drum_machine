@@ -9,16 +9,21 @@ const DrumPad = ({ drumPad }) => {
   const drumSound = useRef();
 
   const soundContext = useContext(SoundContext);
-  const { addSound } = soundContext;
+  const { currentTrack, addSound } = soundContext;
 
   const handleClick = () => {
     drumSound.current.currentTime = 0;
     drumSound.current.play();
-    addSound({
-      id: uuidv1(),
-      name: drumPad.name,
-      audio: drumSound.current
-    });
+
+    if (currentTrack.length < 10) {
+      addSound({
+        id: uuidv1(),
+        name: drumPad.name,
+        audio: drumSound.current
+      });
+    } else {
+      return void 0;
+    }
   };
 
   return (

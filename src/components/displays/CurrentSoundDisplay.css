@@ -4,5 +4,5 @@
   align-items: center;
   height: 30px;
   border-radius: var(--border-radius);
-  background-color: var(--current-sound-display-bg);
+  background-color: var(--display-bg);
 }

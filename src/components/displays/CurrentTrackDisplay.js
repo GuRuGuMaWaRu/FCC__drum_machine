@@ -1,17 +1,21 @@
 import React, { useContext } from "react";
 
-import PlayedSoundItem from "./PlayedSoundItem";
+import CurrentTrackItem from "./CurrentTrackItem";
 import SoundContext from "../../context/sound/soundContext";
-import "./PlayedSoundsDisplay.css";
+import "./CurrentTrackDisplay.css";
 
-const PlayedSoundsDisplay = () => {
+const CurrentTrackDisplay = () => {
   const soundContext = useContext(SoundContext);
   const { currentSound, currentTrack } = soundContext;
 
+  const limitReached = currentTrack.length > 9;
+
   return (
-    <div id="played-sounds-display">
+    <div
+      className={`played-sounds-display ${limitReached ? "limit-reached" : ""}`}
+    >
       {currentTrack.map(sound => (
-        <PlayedSoundItem
+        <CurrentTrackItem
           key={sound.id}
           name={sound.name}
           isPlayed={currentSound && currentSound.id === sound.id ? true : false}
@@ -21,4 +25,4 @@ const PlayedSoundsDisplay = () => {
   );
 };
 
-export default PlayedSoundsDisplay;
+export default CurrentTrackDisplay;
