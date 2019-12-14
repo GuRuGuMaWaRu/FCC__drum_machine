@@ -1,4 +1,4 @@
-import { ADD_SOUND, PLAY_SOUND } from "../types";
+import { ADD_SOUND, PLAY_SOUND, CLEAR_DISPLAYS } from "../types";
 
 export default (state, action) => {
   switch (action.type) {
@@ -12,6 +12,11 @@ export default (state, action) => {
       return {
         ...state,
         currentSound: action.payload
+      };
+    case CLEAR_DISPLAYS:
+      return {
+        ...state,
+        currentSound: {}
       };
     default:
       return state;
