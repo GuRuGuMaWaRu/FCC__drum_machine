@@ -1,0 +1,31 @@
+.current-track-area {
+  display: flex;
+  justify-content: space-between;
+}
+
+.control-button {
+  height: 30px;
+  width: 30px;
+  color: var(--control-btn-accent);
+  border: 2px solid var(--control-btn-accent);
+  border-radius: var(--border-radius);
+  margin-left: 7px;
+  background-color: var(--control-btn-common-bg);
+  cursor: pointer;
+  outline: none;
+}
+
+.control-button:hover,
+.control-button:active {
+  background-color: var(--control-btn-bg-active);
+}
+
+.control-button:active {
+  color: var(--control-btn-accent-active);
+}
+
+.play-button {
+  margin-left: 0;
+  margin-right: 7px;
+  background-color: var(--control-btn-bg);
+}

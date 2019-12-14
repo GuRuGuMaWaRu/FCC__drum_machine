@@ -7,6 +7,18 @@
   --drum-pad-accent: rgb(216, 55, 27);
   --display-bg: #fff;
   --display-bg-limit-reached: rgb(250, 232, 68);
+  --control-btn-common-bg: mediumslateblue;
+  --control-btn-bg: rgb(88, 70, 190);
+  --control-btn-bg-active: rgb(51, 28, 184);
+  --control-btn-accent: rgb(250, 232, 68);
+  --control-btn-accent-active: rgb(216, 55, 27);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 /* Remove default margin */

@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 
 import CurrentTrackDisplay from "../displays/CurrentTrackDisplay";
 import SoundContext from "../../context/sound/soundContext";
+import "./SoundStorePane.css";
 
 const SoundStorePane = () => {
   const [playing, setPlaying] = useState(false);
@@ -34,13 +35,23 @@ const SoundStorePane = () => {
   };
 
   return (
-    <div>
-      <div>
+    <div className="sound-store-pane">
+      <div className="current-track-area">
+        <button
+          className="control-button play-button"
+          onClick={handlePlay}
+          disabled={playing}
+        >
+          <i className="fas fa-play"></i>
+        </button>
         <CurrentTrackDisplay />
+        <button className="control-button">
+          <i className="fas fa-chevron-left"></i>
+        </button>
+        <button className="control-button">
+          <i className="fas fa-chevron-down"></i>
+        </button>
       </div>
-      <button onClick={handlePlay} disabled={playing}>
-        Play
-      </button>
     </div>
   );
 };
