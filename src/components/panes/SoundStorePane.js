@@ -1,24 +1,23 @@
-import React, { useState, useContext } from "react";
+import React, { useContext, useRef } from "react";
 
 import CurrentTrackDisplay from "../displays/CurrentTrackDisplay";
 import SoundContext from "../../context/sound/soundContext";
 import "./SoundStorePane.css";
 
 const SoundStorePane = () => {
-  const [playing, setPlaying] = useState(false);
-
   const soundContext = useContext(SoundContext);
   const { currentTrack, playSound, removeSound } = soundContext;
 
+  const playInterval = useRef();
+
   const handlePlay = () => {
-    setPlaying(true);
     let iteration = 0;
 
-    const intervalID = setInterval(() => {
+    playInterval.current = setInterval(() => {
       if (iteration >= currentTrack.length) {
-        clearInterval(intervalID);
+        clearInterval(playInterval.current);
+        playInterval.current = null;
         playSound(null);
-        setPlaying(false);
         return;
       }
 
@@ -34,6 +33,12 @@ const SoundStorePane = () => {
     }, 500);
   };
 
+  const handleStop = () => {
+    clearInterval(playInterval.current);
+    playInterval.current = null;
+    playSound(null);
+  };
+
   const handleRemove = () => {
     removeSound();
   };
@@ -41,13 +46,15 @@ const SoundStorePane = () => {
   return (
     <div className="sound-store-pane">
       <div className="current-track-area">
-        <button
-          className="control-button play-button"
-          onClick={handlePlay}
-          disabled={playing}
-        >
-          <i className="fas fa-play"></i>
-        </button>
+        {!playInterval.current ? (
+          <button className="control-button play-button" onClick={handlePlay}>
+            <i className="fas fa-play"></i>
+          </button>
+        ) : (
+          <button className="control-button play-button" onClick={handleStop}>
+            <i className="fas fa-stop"></i>
+          </button>
+        )}
         <CurrentTrackDisplay />
         <button className="control-button" onClick={handleRemove}>
           <i className="fas fa-chevron-left"></i>
