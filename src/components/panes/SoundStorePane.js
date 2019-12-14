@@ -25,6 +25,7 @@ const SoundStorePane = () => {
         id: currentTrack[iteration].id,
         name: currentTrack[iteration].name
       });
+      currentTrack[iteration].audio.currentTime = 0;
       currentTrack[iteration].audio.play();
 
       iteration += 1;

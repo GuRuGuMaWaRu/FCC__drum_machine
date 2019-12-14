@@ -12,6 +12,7 @@ const DrumPad = ({ drumPad }) => {
   const { addSound } = soundContext;
 
   const handleClick = () => {
+    drumSound.current.currentTime = 0;
     drumSound.current.play();
     addSound({
       id: uuidv1(),
