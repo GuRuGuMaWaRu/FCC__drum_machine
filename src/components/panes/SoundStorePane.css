@@ -29,3 +29,8 @@
   margin-right: 7px;
   background-color: var(--control-btn-bg);
 }
+
+.play-button:disabled {
+  background-color: var(--control-btn-common-bg);
+  cursor: default;
+}

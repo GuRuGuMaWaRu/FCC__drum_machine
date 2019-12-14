@@ -8,7 +8,7 @@ const SoundStorePane = () => {
   const [playing, setPlaying] = useState(false);
 
   const soundContext = useContext(SoundContext);
-  const { currentTrack, playSound } = soundContext;
+  const { currentTrack, playSound, removeSound } = soundContext;
 
   const handlePlay = () => {
     setPlaying(true);
@@ -34,6 +34,10 @@ const SoundStorePane = () => {
     }, 500);
   };
 
+  const handleRemove = () => {
+    removeSound();
+  };
+
   return (
     <div className="sound-store-pane">
       <div className="current-track-area">
@@ -45,7 +49,7 @@ const SoundStorePane = () => {
           <i className="fas fa-play"></i>
         </button>
         <CurrentTrackDisplay />
-        <button className="control-button">
+        <button className="control-button" onClick={handleRemove}>
           <i className="fas fa-chevron-left"></i>
         </button>
         <button className="control-button">
