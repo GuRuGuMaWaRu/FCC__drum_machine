@@ -14,13 +14,17 @@ const CurrentTrackDisplay = () => {
     <div
       className={`played-sounds-display ${limitReached ? "limit-reached" : ""}`}
     >
-      {currentTrack.map(sound => (
-        <CurrentTrackItem
-          key={sound.id}
-          name={sound.name}
-          isPlayed={currentSound && currentSound.id === sound.id ? true : false}
-        />
-      ))}
+      {currentTrack.length === 0
+        ? "---"
+        : currentTrack.map(sound => (
+            <CurrentTrackItem
+              key={sound.id}
+              name={sound.name}
+              isPlayed={
+                currentSound && currentSound.id === sound.id ? true : false
+              }
+            />
+          ))}
     </div>
   );
 };

@@ -35,7 +35,9 @@ const SoundStorePane = () => {
 
   return (
     <div>
-      <CurrentTrackDisplay />
+      <div>
+        <CurrentTrackDisplay />
+      </div>
       <button onClick={handlePlay} disabled={playing}>
         Play
       </button>
