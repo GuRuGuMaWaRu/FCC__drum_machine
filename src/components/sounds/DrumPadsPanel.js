@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import uuidv1 from "uuid/v1";
+
 import DrumPad from "./DrumPad";
+import SoundContext from "../../context/sound/soundContext";
 import "./DrumPadsPanel.css";
 
 const DrumPadsPanel = () => {
+  const soundContext = useContext(SoundContext);
+  const { currentTrack, addSound, clearDisplays } = soundContext;
+
   const drumPads = [
     {
       name: "Q",
@@ -42,10 +48,27 @@ const DrumPadsPanel = () => {
     }
   ];
 
+  const handlePlay = drumData => {
+    const { audio, name } = drumData;
+
+    audio.currentTime = 0;
+    audio.play();
+
+    if (currentTrack.length > 9) {
+      clearDisplays();
+    } else {
+      addSound({
+        id: uuidv1(),
+        name: name,
+        audio: audio
+      });
+    }
+  };
+
   return (
     <div id="drum-pads-panel">
       {drumPads.map(drumPad => (
-        <DrumPad key={drumPad.name} drumPad={drumPad} />
+        <DrumPad key={drumPad.name} drumPad={drumPad} handlePlay={handlePlay} />
       ))}
     </div>
   );
