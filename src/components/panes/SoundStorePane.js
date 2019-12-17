@@ -1,12 +1,13 @@
 import React, { useContext, useRef } from "react";
 
 import CurrentTrackDisplay from "../displays/CurrentTrackDisplay";
+import SoundStore from "../sounds/SoundStore";
 import SoundContext from "../../context/sound/soundContext";
 import "./SoundStorePane.css";
 
 const SoundStorePane = () => {
   const soundContext = useContext(SoundContext);
-  const { currentTrack, playSound, removeSound } = soundContext;
+  const { currentTrack, playSound, removeSound, saveTrack } = soundContext;
 
   const playInterval = useRef();
 
@@ -43,6 +44,10 @@ const SoundStorePane = () => {
     removeSound();
   };
 
+  const handleSave = () => {
+    saveTrack();
+  };
+
   return (
     <div className="sound-store-pane">
       <div className="current-track-area">
@@ -59,10 +64,11 @@ const SoundStorePane = () => {
         <button className="control-button" onClick={handleRemove}>
           <i className="fas fa-chevron-left"></i>
         </button>
-        <button className="control-button">
+        <button className="control-button" onClick={handleSave}>
           <i className="fas fa-chevron-down"></i>
         </button>
       </div>
+      <SoundStore />
     </div>
   );
 };

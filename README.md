@@ -19,6 +19,11 @@ User Story #6: When I press the trigger key associated with each .drum-pad, the 
 User Story #7: When a .drum-pad is triggered, a string describing the associated audio clip is displayed as the inner text of the #display element (each string must be unique).
 
 TODOs
-- Set limit to saving sounds to current track
-- Remove sound from current track
-- Save current track
+X Set limit to saving sounds to current track
+X Remove sound from current track
+X Save current track
+
+- proper highlight for saved tracks
+- proper highlight (hover, active) for drum pads
+- Soundblaster 3000
+- Delete selected/current track button

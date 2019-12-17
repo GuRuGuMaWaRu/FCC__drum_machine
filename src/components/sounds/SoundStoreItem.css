@@ -1,0 +1,26 @@
+.sound-store-item {
+  /* color: var(--sound-store-item-accent); */
+  display: flex;
+  align-items: stretch;
+  /* padding: 4px 10px; */
+  border-bottom: 2px solid var(--sound-store-item-accent);
+  background-color: var(--sound-store-item-bg);
+  /* cursor: pointer; */
+}
+
+.sound-store-item-track {
+  flex-grow: 2;
+  padding: 4px 10px;
+  color: var(--sound-store-item-accent);
+  background-color: var(--sound-store-item-bg);
+  cursor: pointer;
+}
+
+.sound-store-item-track:hover {
+  color: var(--sound-store-item-bg);
+  background-color: var(--sound-store-item-bg-active);
+}
+
+.sound-store-item-sound {
+  padding: 0 3px;
+}

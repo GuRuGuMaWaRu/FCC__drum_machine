@@ -1,8 +1,15 @@
 import React, { useReducer } from "react";
+import uuidv1 from "uuid/v1";
 
 import SoundContext from "./soundContext";
 import soundReducer from "./soundReducer";
-import { ADD_SOUND, PLAY_SOUND, CLEAR_DISPLAYS, REMOVE_SOUND } from "../types";
+import {
+  ADD_SOUND,
+  PLAY_SOUND,
+  CLEAR_DISPLAYS,
+  REMOVE_SOUND,
+  SAVE_TRACK
+} from "../types";
 
 const SoundState = props => {
   const initialState = {
@@ -14,10 +21,10 @@ const SoundState = props => {
   const [state, dispatch] = useReducer(soundReducer, initialState);
 
   // Add sound
-  const addSound = sound => {
+  const addSound = ({ name, audio }) => {
     dispatch({
       type: ADD_SOUND,
-      payload: sound
+      payload: { name: name, audio: audio, id: uuidv1() }
     });
   };
 
@@ -43,6 +50,13 @@ const SoundState = props => {
     });
   };
 
+  // Save track
+  const saveTrack = () => {
+    dispatch({
+      type: SAVE_TRACK
+    });
+  };
+
   return (
     <SoundContext.Provider
       value={{
@@ -52,7 +66,8 @@ const SoundState = props => {
         addSound,
         playSound,
         removeSound,
-        clearDisplays
+        clearDisplays,
+        saveTrack
       }}
     >
       {props.children}

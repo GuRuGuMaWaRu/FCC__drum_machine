@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import uuidv1 from "uuid/v1";
 
 import DrumPad from "./DrumPad";
 import SoundContext from "../../context/sound/soundContext";
@@ -58,7 +57,6 @@ const DrumPadsPanel = () => {
       clearDisplays();
     } else {
       addSound({
-        id: uuidv1(),
         name: name,
         audio: audio
       });
