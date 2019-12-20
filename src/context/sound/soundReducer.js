@@ -34,6 +34,8 @@ export default (state, action) => {
     case SAVE_TRACK:
       return {
         ...state,
+        currentSound: {},
+        currentTrack: [],
         savedTracks: [
           { id: uuidv1(), track: state.currentTrack },
           ...state.savedTracks
