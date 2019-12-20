@@ -6,13 +6,21 @@ import "./SoundStore.css";
 
 const SoundStore = () => {
   const soundContext = useContext(SoundContext);
-  const { savedTracks } = soundContext;
+  const { savedTracks, deleteTrack } = soundContext;
+
+  const handleDeleteTrack = id => {
+    deleteTrack(id);
+  };
 
   return (
     <div className="sound-store">
       {savedTracks.length > 0 &&
         savedTracks.map(savedTrack => (
-          <SoundStoreItem key={savedTrack.id} savedTrack={savedTrack} />
+          <SoundStoreItem
+            key={savedTrack.id}
+            savedTrack={savedTrack}
+            handleDeleteTrack={handleDeleteTrack}
+          />
         ))}
     </div>
   );

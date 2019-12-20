@@ -6,3 +6,4 @@ export const CLEAR_DISPLAYS = "CLEAR_DISPLAYS";
 
 // Tracks
 export const SAVE_TRACK = "SAVE_TRACK";
+export const DELETE_TRACK = "DELETE_TRACK";

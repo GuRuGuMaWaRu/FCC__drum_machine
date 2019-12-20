@@ -5,7 +5,8 @@ import {
   PLAY_SOUND,
   REMOVE_SOUND,
   CLEAR_DISPLAYS,
-  SAVE_TRACK
+  SAVE_TRACK,
+  DELETE_TRACK
 } from "../types";
 
 export default (state, action) => {
@@ -40,6 +41,13 @@ export default (state, action) => {
           { id: uuidv1(), track: state.currentTrack },
           ...state.savedTracks
         ]
+      };
+    case DELETE_TRACK:
+      return {
+        ...state,
+        savedTracks: state.savedTracks.filter(
+          track => track.id !== action.payload
+        )
       };
     default:
       return state;

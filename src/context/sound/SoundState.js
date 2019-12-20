@@ -8,7 +8,8 @@ import {
   PLAY_SOUND,
   CLEAR_DISPLAYS,
   REMOVE_SOUND,
-  SAVE_TRACK
+  SAVE_TRACK,
+  DELETE_TRACK
 } from "../types";
 
 const SoundState = props => {
@@ -65,6 +66,13 @@ const SoundState = props => {
     });
   };
 
+  const deleteTrack = id => {
+    dispatch({
+      type: DELETE_TRACK,
+      payload: id
+    });
+  };
+
   return (
     <SoundContext.Provider
       value={{
@@ -75,7 +83,8 @@ const SoundState = props => {
         playSound,
         removeSound,
         clearDisplays,
-        saveTrack
+        saveTrack,
+        deleteTrack
       }}
     >
       {props.children}
