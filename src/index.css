@@ -17,6 +17,8 @@
   --sound-store-item-bg: rgb(250, 232, 68);
   --sound-store-item-bg-active: rgb(51, 28, 184);
   --sound-store-item-accent: #000;
+  --delete-store-item-button-accent: rgb(216, 55, 27);
+  --delete-store-item-button-bg-active: rgb(51, 28, 184);
 }
 
 /* Box sizing rules */

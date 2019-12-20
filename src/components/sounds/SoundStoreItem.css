@@ -24,3 +24,17 @@
 .sound-store-item-sound {
   padding: 0 3px;
 }
+
+.delete-store-item-button {
+  width: 30px;
+  border: none;
+  cursor: pointer;
+  color: var(--delete-store-item-button-accent);
+  background-color: inherit;
+  /* background-color: var(--delete-store-item-button-bg); */
+}
+
+.delete-store-item-button:hover,
+.delete-store-item-button:active {
+  background-color: var(--delete-store-item-button-bg-active);
+}

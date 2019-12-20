@@ -13,7 +13,9 @@ const SoundStoreItem = ({ savedTrack: { id, track } }) => {
           </span>
         ))}
       </div>
-      <button>Delete</button>
+      <button className="delete-store-item-button">
+        <i className="fas fa-times"></i>
+      </button>
     </div>
   );
 };
