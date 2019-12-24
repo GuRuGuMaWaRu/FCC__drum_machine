@@ -10,7 +10,8 @@ import {
   REMOVE_SOUND,
   SAVE_TRACK,
   DELETE_TRACK,
-  CLEAR_CURRENT_TRACK
+  CLEAR_CURRENT_TRACK,
+  SELECT_TRACK
 } from "../types";
 
 const SoundState = props => {
@@ -18,13 +19,13 @@ const SoundState = props => {
     currentSound: {},
     currentTrack: [],
     savedTracks: [
-      {
-        id: 1,
-        track: [
-          { id: 1, name: "Q" },
-          { id: 2, name: "E" }
-        ]
-      }
+      // {
+      //   id: 1,
+      //   track: [
+      //     { id: 1, name: "Q" },
+      //     { id: 2, name: "E" }
+      //   ]
+      // }
     ]
   };
 
@@ -82,6 +83,14 @@ const SoundState = props => {
     });
   };
 
+  // Select track from the store
+  const selectTrack = id => {
+    dispatch({
+      type: SELECT_TRACK,
+      payload: id
+    });
+  };
+
   return (
     <SoundContext.Provider
       value={{
@@ -94,7 +103,8 @@ const SoundState = props => {
         clearDisplays,
         saveTrack,
         deleteTrack,
-        clearTrack
+        clearTrack,
+        selectTrack
       }}
     >
       {props.children}

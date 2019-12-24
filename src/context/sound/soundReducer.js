@@ -7,7 +7,8 @@ import {
   CLEAR_DISPLAYS,
   SAVE_TRACK,
   DELETE_TRACK,
-  CLEAR_CURRENT_TRACK
+  CLEAR_CURRENT_TRACK,
+  SELECT_TRACK
 } from "../types";
 
 export default (state, action) => {
@@ -55,6 +56,13 @@ export default (state, action) => {
         ...state,
         currentSound: {},
         currentTrack: []
+      };
+    case SELECT_TRACK:
+      return {
+        ...state,
+        currentTrack: state.savedTracks.filter(
+          track => track.id === action.payload
+        )[0].track
       };
     default:
       return state;

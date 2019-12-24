@@ -6,7 +6,11 @@ import "./SoundStore.css";
 
 const SoundStore = () => {
   const soundContext = useContext(SoundContext);
-  const { savedTracks, deleteTrack } = soundContext;
+  const { savedTracks, deleteTrack, selectTrack } = soundContext;
+
+  const handleSelectTrack = id => {
+    selectTrack(id);
+  };
 
   const handleDeleteTrack = id => {
     deleteTrack(id);
@@ -19,6 +23,7 @@ const SoundStore = () => {
           <SoundStoreItem
             key={savedTrack.id}
             savedTrack={savedTrack}
+            handleSelectTrack={handleSelectTrack}
             handleDeleteTrack={handleDeleteTrack}
           />
         ))}

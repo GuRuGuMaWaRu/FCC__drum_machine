@@ -24,7 +24,8 @@ X Remove sound from current track
 X Save current track
 X Proper highlighting for saved tracks on hover/select
 X Clear current track when saving it
+X Clear selected/current track
+X Select track from the store and play it
 
 - proper highlighting (hover, active) for drum pads
 - "Soundblaster 3000" title
-- Delete selected/current track button
