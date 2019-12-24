@@ -9,7 +9,8 @@ import {
   CLEAR_DISPLAYS,
   REMOVE_SOUND,
   SAVE_TRACK,
-  DELETE_TRACK
+  DELETE_TRACK,
+  CLEAR_CURRENT_TRACK
 } from "../types";
 
 const SoundState = props => {
@@ -66,10 +67,18 @@ const SoundState = props => {
     });
   };
 
+  // Delete track
   const deleteTrack = id => {
     dispatch({
       type: DELETE_TRACK,
       payload: id
+    });
+  };
+
+  // Clear currently played track
+  const clearTrack = () => {
+    dispatch({
+      type: CLEAR_CURRENT_TRACK
     });
   };
 
@@ -84,7 +93,8 @@ const SoundState = props => {
         removeSound,
         clearDisplays,
         saveTrack,
-        deleteTrack
+        deleteTrack,
+        clearTrack
       }}
     >
       {props.children}

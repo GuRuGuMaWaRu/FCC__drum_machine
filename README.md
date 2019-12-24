@@ -22,9 +22,9 @@ TODOs
 X Set limit to saving sounds to current track
 X Remove sound from current track
 X Save current track
+X Proper highlighting for saved tracks on hover/select
+X Clear current track when saving it
 
-- proper highlighting for saved tracks on hover/select
 - proper highlighting (hover, active) for drum pads
 - "Soundblaster 3000" title
 - Delete selected/current track button
-- clear current track when saving it

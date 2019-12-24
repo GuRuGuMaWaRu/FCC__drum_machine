@@ -7,7 +7,13 @@ import "./SoundStorePane.css";
 
 const SoundStorePane = () => {
   const soundContext = useContext(SoundContext);
-  const { currentTrack, playSound, removeSound, saveTrack } = soundContext;
+  const {
+    currentTrack,
+    playSound,
+    removeSound,
+    saveTrack,
+    clearTrack
+  } = soundContext;
 
   const playInterval = useRef();
 
@@ -44,6 +50,10 @@ const SoundStorePane = () => {
     removeSound();
   };
 
+  const handleClear = () => {
+    clearTrack();
+  };
+
   const handleSave = () => {
     saveTrack();
   };
@@ -63,6 +73,9 @@ const SoundStorePane = () => {
         <CurrentTrackDisplay />
         <button className="control-button" onClick={handleRemove}>
           <i className="fas fa-chevron-left"></i>
+        </button>
+        <button className="control-button" onClick={handleClear}>
+          <i className="fas fa-times"></i>
         </button>
         <button className="control-button" onClick={handleSave}>
           <i className="fas fa-chevron-down"></i>
