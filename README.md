@@ -27,5 +27,7 @@ X Clear current track when saving it
 X Clear selected/current track
 X Select track from the store and play it
 
-- proper highlighting (hover, active) for drum pads
+- Proper highlighting (hover, active) for drum pads
 - "Soundblaster 3000" title
+- Limit saved tracks to 5
+- It shouldn't save empty tracks

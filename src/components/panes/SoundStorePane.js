@@ -9,6 +9,7 @@ const SoundStorePane = () => {
   const soundContext = useContext(SoundContext);
   const {
     currentTrack,
+    savedTracks,
     playSound,
     removeSound,
     saveTrack,
@@ -55,7 +56,9 @@ const SoundStorePane = () => {
   };
 
   const handleSave = () => {
-    saveTrack();
+    if (savedTracks.length < 5) {
+      saveTrack();
+    }
   };
 
   return (

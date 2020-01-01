@@ -7,5 +7,4 @@
   border: 2px solid var(--sound-store-border);
   border-radius: var(--border-radius);
   margin-top: 10px;
-  overflow-y: scroll;
 }
