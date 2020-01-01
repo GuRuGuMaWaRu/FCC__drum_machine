@@ -56,7 +56,7 @@ const SoundStorePane = () => {
   };
 
   const handleSave = () => {
-    if (savedTracks.length < 5) {
+    if (savedTracks.length < 5 && currentTrack.length > 0) {
       saveTrack();
     }
   };
