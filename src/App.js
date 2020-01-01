@@ -10,8 +10,11 @@ const App = () => {
   return (
     <SoundState>
       <div id="drum-machine">
-        <SoundPlayPane />
-        <SoundStorePane />
+        <div className="title">Soundblaster 3000</div>
+        <div className="panes">
+          <SoundPlayPane />
+          <SoundStorePane />
+        </div>
       </div>
     </SoundState>
   );

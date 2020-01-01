@@ -1,8 +1,20 @@
 /* Global variables */
 :root {
   --main-font: "Roboto Mono", monospace;
+  /* --title-font: "Press Start 2P", cursive; */
+  /* --title-font: "Lalezar", cursive; */
+  /* --title-font: "Shrikhand", cursive; */
+  /* --title-font: "Racing Sans One", cursive; */
+  --title-font: "Bungee", cursive;
+  /* --title-font: "Bungee Inline", cursive; */
+  /* --title-font: "Bungee Shade", cursive; */
+  /* --title-font: "Sonsie One", cursive; */
+  /* --title-font: "Molle", cursive; */
+  /* --title-font: "Monofett", cursive; */
+
   --border-radius: 3px;
   --drum-machine-bg: mediumslateblue;
+  --title-color: rgb(250, 232, 68);
   --drum-pad-bg: rgb(250, 232, 68);
   --drum-pad-bg-hover: rgb(194, 177, 29);
   --drum-pad-accent: rgb(216, 55, 27);

@@ -1,8 +1,22 @@
 #drum-machine {
-  display: flex;
-  justify-content: space-between;
   font-family: var(--main-font);
-  padding: 1rem;
+  padding: 0.6rem 1rem 1rem;
   border-radius: var(--border-radius);
   background: var(--drum-machine-bg);
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--title-font);
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 0.25rem;
+  color: var(--title-color);
+  padding-bottom: 0.6rem;
+}
+
+.panes {
+  display: flex;
+  justify-content: space-between;
 }
