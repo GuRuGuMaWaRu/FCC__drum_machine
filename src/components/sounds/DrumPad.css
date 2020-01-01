@@ -11,3 +11,7 @@
   background-color: var(--drum-pad-bg);
   cursor: pointer;
 }
+
+.drum-pad:hover {
+  background-color: var(--drum-pad-bg-hover);
+}
