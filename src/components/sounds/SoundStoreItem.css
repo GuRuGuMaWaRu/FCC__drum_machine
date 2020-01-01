@@ -9,7 +9,7 @@
   /* cursor: pointer; */
 }
 
-.sound-store-item:last-child {
+.sound-store-item:nth-child(5) {
   border-bottom: none;
 }
 
