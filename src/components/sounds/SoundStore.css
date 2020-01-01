@@ -9,3 +9,15 @@
   margin-top: 10px;
   background-color: var(--sound-store-bg);
 }
+
+@media (max-width: 600px) {
+  .sound-store {
+    width: 345px;
+  }
+}
+
+@media (max-width: 400px) {
+  .sound-store {
+    width: auto;
+  }
+}

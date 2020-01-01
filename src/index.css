@@ -59,3 +59,12 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+@media (max-width: 400px) {
+  body {
+    height: 100vh;
+  }
+  #root {
+    height: 100vh;
+  }
+}

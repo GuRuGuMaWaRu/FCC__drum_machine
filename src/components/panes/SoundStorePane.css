@@ -39,3 +39,20 @@
   background-color: var(--control-btn-common-bg);
   cursor: default;
 }
+
+@media (max-width: 600px) {
+  .sound-store-pane {
+    order: 1;
+    width: 345px;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .sound-store-pane {
+    width: auto;
+  }
+  .current-track-area {
+    widht: auto;
+  }
+}

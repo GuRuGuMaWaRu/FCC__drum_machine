@@ -6,3 +6,9 @@
   border-radius: var(--border-radius);
   background-color: var(--display-bg);
 }
+
+@media (max-width: 600px) {
+  /* #display {
+    width: 345px;
+  } */
+}

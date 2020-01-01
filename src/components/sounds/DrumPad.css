@@ -15,3 +15,16 @@
 .drum-pad:hover {
   background-color: var(--drum-pad-bg-hover);
 }
+
+@media (max-width: 600px) {
+  .drum-pad {
+    width: auto;
+    /* height: auto; */
+  }
+}
+
+@media (max-width: 400px) {
+  .drum-pad {
+    height: 55px;
+  }
+}

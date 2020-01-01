@@ -29,5 +29,6 @@ X Select track from the store and play it
 X Limit saved tracks to 5
 X It shouldn't save empty tracks
 X Proper highlighting (hover, active) for drum pads
+X "Soundblaster 3000" title
 
-- "Soundblaster 3000" title
+- Responsive design

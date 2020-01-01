@@ -6,8 +6,6 @@
 }
 
 .title {
-  display: flex;
-  flex-direction: column;
   font-family: var(--title-font);
   text-align: center;
   font-size: 1.5rem;
@@ -19,4 +17,28 @@
 .panes {
   display: flex;
   justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+  .title {
+    letter-spacing: 0.2rem;
+  }
+  .panes {
+    flex-direction: column;
+    width: 345px;
+  }
+}
+
+@media (max-width: 400px) {
+  #drum-machine {
+    /* height: 100vh; */
+    width: 100%;
+  }
+  .title {
+    letter-spacing: 0.1rem;
+  }
+  .panes {
+    flex-direction: column;
+    width: auto;
+  }
 }
