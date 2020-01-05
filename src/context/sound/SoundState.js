@@ -18,15 +18,7 @@ const SoundState = props => {
   const initialState = {
     currentSound: {},
     currentTrack: [],
-    savedTracks: [
-      // {
-      //   id: 1,
-      //   track: [
-      //     { id: 1, name: "Q" },
-      //     { id: 2, name: "E" }
-      //   ]
-      // }
-    ]
+    savedTracks: []
   };
 
   const [state, dispatch] = useReducer(soundReducer, initialState);
