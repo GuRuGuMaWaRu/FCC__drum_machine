@@ -1,34 +1,44 @@
-Objective: Build a CodePen.io app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/MJyNMd.
+# Drum Machine
 
-Fulfill the below user stories and get all of the tests to pass. Give it your own personal style.
+## Overview
 
-You can use any mix of HTML, JavaScript, CSS, Bootstrap, SASS, React, Redux, and jQuery to complete this project. You should use a frontend framework (like React for example) because this section is about learning frontend frameworks. Additional technologies not listed above are not recommended and using them is at your own risk. We are looking at supporting other frontend frameworks like Angular and Vue, but they are not currently supported. We will accept and try to fix all issue reports that use the suggested technology stack for this project. Happy coding!
+FreeCodeCamp Front End Libraries Project. See project requirements at [this freecodecamp page](https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/build-a-drum-machine)
 
-User Story #1: I should be able to see an outer container with a corresponding id="drum-machine" that contains all other elements.
+## Demo
 
-User Story #2: Within #drum-machine I can see an element with a corresponding id="display".
+![](https://github.com/gurugumawaru/FCC__drum_machine/blob/master/fcc_drummachine.gif)
 
-User Story #3: Within #drum-machine I can see 9 clickable drum pad elements, each with a class name of drum-pad, a unique id that describes the audio clip the drum pad will be set up to trigger, and an inner text that corresponds to one of the following keys on the keyboard: Q, W, E, A, S, D, Z, X, C. The drum pads MUST be in this order.
+## Features
 
-User Story #4: Within each .drum-pad, there should be an HTML5 audio element which has a src attribute pointing to an audio clip, a class name of clip, and an id corresponding to the inner text of its parent .drum-pad (e.g. id="Q", id="W", id="E" etc.).
+- Play different sounds
+- Save soundtracks
+- Play, edit, delete saved soundtracks
 
-User Story #5: When I click on a .drum-pad element, the audio clip contained in its child audio element should be triggered.
+## Running the project
 
-User Story #6: When I press the trigger key associated with each .drum-pad, the audio clip contained in its child audio element should be triggered (e.g. pressing the Q key should trigger the drum pad which contains the string "Q", pressing the W key should trigger the drum pad which contains the string "W", etc.).
+**Live version**:
 
-User Story #7: When a .drum-pad is triggered, a string describing the associated audio clip is displayed as the inner text of the #display element (each string must be unique).
+- [ ] [This project at codepen](https://codepen.io/GuRuGu/full/OgOvyL/)
+- [ ] [This project at gh-pages](https://gurugumawaru.github.io/FCC_ticTacToe/#/)
 
-TODOs
-X Set limit to saving sounds to current track
-X Remove sound from current track
-X Save current track
-X Proper highlighting for saved tracks on hover/select
-X Clear current track when saving it
-X Clear selected/current track
-X Select track from the store and play it
-X Limit saved tracks to 5
-X It shouldn't save empty tracks
-X Proper highlighting (hover, active) for drum pads
-X "Soundblaster 3000" title
+**From the repo**:
 
-- Responsive design
+1. Clone this project
+2. Go to the project directory and run `npm install`
+3. Run `npm run start`
+4. Start pressing buttons, playing sounds and creating tracks.
+
+## Dependencies
+
+Techstack used when creating this project.
+
+### Frontend dependencies
+
+- [create-react-app](https://github.com/facebook/create-react-app)
+- [react](https://reactjs.org/)
+- [uuid](https://www.npmjs.com/package/uuid)
+
+## TODOs
+
+- Persist soundtracks for users, so that they can always return and play them
+- More sounds
