@@ -11,9 +11,3 @@
 .limit-reached {
   background-color: var(--display-bg-limit-reached);
 }
-
-@media (max-width: 400px) {
-  .played-sounds-display {
-    width: 150px;
-  }
-}

@@ -1,6 +1,4 @@
 import React, { useContext } from "react";
-// import SimpleBar from "simplebar-react";
-// import "simplebar/dist/simplebar.min.css";
 
 import SoundStoreItem from "./SoundStoreItem";
 import SoundContext from "../../context/sound/soundContext";
@@ -19,7 +17,6 @@ const SoundStore = () => {
   };
 
   return (
-    // <SimpleBar className="sound-store" forceVisible="y" autoHide={false}>
     <div className="sound-store">
       {savedTracks.length > 0 &&
         savedTracks.map(savedTrack => (
@@ -31,7 +28,6 @@ const SoundStore = () => {
           />
         ))}
     </div>
-    // </SimpleBar>
   );
 };
 

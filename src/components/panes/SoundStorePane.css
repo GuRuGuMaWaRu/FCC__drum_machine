@@ -48,11 +48,8 @@
   }
 }
 
-@media (max-width: 400px) {
+@media all and (max-width: 440px) {
   .sound-store-pane {
     width: auto;
-  }
-  .current-track-area {
-    widht: auto;
   }
 }

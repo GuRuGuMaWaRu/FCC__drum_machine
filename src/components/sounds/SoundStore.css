@@ -3,7 +3,6 @@
   flex-direction: column;
   height: 170px;
   width: 330px;
-  /* padding: 10px; */
   border: 2px solid var(--sound-store-border);
   border-radius: var(--border-radius);
   margin-top: 10px;
@@ -16,7 +15,7 @@
   }
 }
 
-@media (max-width: 400px) {
+@media all and (max-width: 440px) {
   .sound-store {
     width: auto;
   }

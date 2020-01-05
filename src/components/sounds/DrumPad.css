@@ -19,11 +19,10 @@
 @media (max-width: 600px) {
   .drum-pad {
     width: auto;
-    /* height: auto; */
   }
 }
 
-@media (max-width: 400px) {
+@media all and (max-width: 440px) {
   .drum-pad {
     height: 55px;
   }

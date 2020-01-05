@@ -1,12 +1,9 @@
 .sound-store-item {
-  /* color: var(--sound-store-item-accent); */
   display: flex;
   align-items: stretch;
   height: 33.5px;
-  /* padding: 4px 10px; */
   border-bottom: 2px solid var(--sound-store-item-accent);
   background-color: var(--sound-store-item-bg);
-  /* cursor: pointer; */
 }
 
 .sound-store-item:nth-child(5) {
@@ -36,7 +33,6 @@
   cursor: pointer;
   color: var(--delete-store-item-button-accent);
   background-color: inherit;
-  /* background-color: var(--delete-store-item-button-bg); */
 }
 
 .delete-store-item-button:hover,
