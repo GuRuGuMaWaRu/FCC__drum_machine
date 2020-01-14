@@ -19,7 +19,7 @@ FreeCodeCamp Front End Libraries Project. See project requirements at [this free
 **Live version**:
 
 - [ ] [This project at codepen](https://codepen.io/GuRuGu/full/MWYrYaZ)
-- [ ] [This project at gh-pages](https://gurugumawaru.github.io/FCC_ticTacToe/#/)
+- [ ] [This project at gh-pages](https://gurugu-fcc-projects.github.io/FCC__drum_machine/)
 
 **From the repo**:
 
